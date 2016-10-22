@@ -1,0 +1,53 @@
+{
+  "name": "d3-force-attract",
+  "version": "0.0.1",
+  "description": "Attraction force for d3.forceSimulation.",
+  "keywords": [
+    "d3",
+    "d3-module",
+    "d3-force",
+    "layout",
+    "graph",
+    "attract",
+    "infovis",
+    "dataviz"
+  ],
+  "homepage": "http://ericsoco.github.io/d3-force-attract/",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Eric Socolofsky",
+    "url": "http://transmote.com/"
+  },
+  "main": "dist/d3-force-attract.js",
+  "module": "dist/d3-force-attract.mjs",
+  "jsnext:main": "dist/d3-force-attract.mjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericsoco/d3-force-attract.git"
+  },
+  "scripts": {
+    "lint": "eslint lib",
+    "test": "tape 'test/**/*-test.js' | tap-dot",
+    "predist": "npm run lint && npm run test",
+    "dist": "rollup -c",
+    "watch": "rollup -c -w",
+    "prepublish": "npm run dist && uglifyjs dist/d3-force-attract.js -c -m -o dist/d3-force-attract.min.js"
+  },
+  "pre-push": [
+    "dist"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-external-helpers": "^6.8.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^3.8.1",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-watch": "^2.5.0",
+    "tap-dot": "^1.0.5",
+    "tape": "^4.6.2",
+    "uglify-js": "^2.7.3"
+  }
+}
