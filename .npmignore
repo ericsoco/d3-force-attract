@@ -1,4 +1,4 @@
-dist
+test
 coverage
 node_modules
 npm_debug.log
