@@ -21,17 +21,54 @@ Download the [latest release](https://github.com/ericsoco/d3-force-attract/relea
 
 `<script src="./d3-force-attract.min.js"></script>`
 
+#### [Browserify CDN](http://wzrd.in/)
+
+`<script src="https://wzrd.in/standalone/d3-force-attract@latest"></script>`
+
 
 ## Usage
 
-`// TODO: info on how to address imported module, depending on install process above`
+### Accessing the module
+
+The install method you use determines the syntax for accessing the module in your code:
+
+#### npm
+
+Import the `forceAttract()` method and use it in a `forceSimulation`.
+
+```
+import { forceAttract } from 'd3-force-attract'
+// ...
+d3.forceSimulation
+	.force('attract', forceAttract());
+```
+
+#### via `<script>`
+
+The `forceAttract()` method is available in the global `d3` namespace.
+
+```
+d3.forceSimulation
+	.force('attract', d3.forceAttract());
+```
+
+#### [Browserify CDN](http://wzrd.in/)
+
+The Browserify CDN camelCases the package name (`d3-force-attract` becomes `d3ForceCluster`), and uses it as a global namespace, and hangs the `forceAttract()` method off of it:
+
+```
+d3.forceSimulation
+	.force('attract', d3ForceCluster.forceAttract());
+```
+
+### Using the module
 
 Add an `'attract'` force just like you would any other D3 force module:
 
 ```
 // add an attract force to pull nodes toward the center of the screen
 d3.forceSimulation()
-	.force('attract', d3.forceAttract()
+	.force('attract', forceAttract()	// see 'Accessing the module' above for the correct syntax
     .target([width/2, height/2])
     .strength(0.05));
 
