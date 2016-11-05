@@ -4,6 +4,8 @@ Modular force for use with D3's [`forceSimulation`](https://github.com/d3/d3-for
 
 Pulls nodes toward a specified ⟨*x*, *y*⟩ target point.
 
+[![Build Status](https://travis-ci.org/ericsoco/d3-force-attract.svg?branch=master)](https://travis-ci.org/ericsoco/d3-force-attract)
+
 
 ## Installing
 
