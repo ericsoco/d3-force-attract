@@ -23,9 +23,9 @@ Download the [latest release](https://github.com/ericsoco/d3-force-attract/relea
 
 `<script src="./d3-force-attract.min.js"></script>`
 
-#### [Browserify CDN](http://wzrd.in/)
+#### [UNPKG](https://unpkg.com/)
 
-`<script src="https://wzrd.in/standalone/d3-force-attract@latest"></script>`
+`<script src="https://unpkg.com/d3-force-attract@latest"></script>`
 
 
 ## Usage
@@ -45,22 +45,13 @@ d3.forceSimulation
 	.force('attract', forceAttract());
 ```
 
-#### via `<script>`
+#### via `<script>`, [UNPKG](https://unpkg.com/)
 
 The `forceAttract()` method is available in the global `d3` namespace.
 
 ```
 d3.forceSimulation
 	.force('attract', d3.forceAttract());
-```
-
-#### [Browserify CDN](http://wzrd.in/)
-
-The Browserify CDN camelCases the package name (`d3-force-attract` becomes `d3ForceCluster`), and uses it as a global namespace, and hangs the `forceAttract()` method off of it:
-
-```
-d3.forceSimulation
-	.force('attract', d3ForceCluster.forceAttract());
 ```
 
 ### Using the module
