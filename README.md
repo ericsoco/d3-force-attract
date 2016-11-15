@@ -13,19 +13,15 @@ Pulls nodes toward a specified ⟨*x*, *y*⟩ target point.
 
 `npm install d3-force-attract`
 
-#### CDN, via `<script>`
+#### CDN ([UNPKG](https://unpkg.com/)), via `<script>`
 
-`<script src="https://wzrd.in/standalone/d3-force-attract@latest"></script>`
+`<script src="https://unpkg.com/d3-force-attract@latest"></script>`
 
 #### Local, via `<script>`
 
 Download the [latest release](https://github.com/ericsoco/d3-force-attract/releases/latest)
 
 `<script src="./d3-force-attract.min.js"></script>`
-
-#### [UNPKG](https://unpkg.com/)
-
-`<script src="https://unpkg.com/d3-force-attract@latest"></script>`
 
 
 ## Usage
@@ -45,7 +41,7 @@ d3.forceSimulation
 	.force('attract', forceAttract());
 ```
 
-#### via `<script>`, [UNPKG](https://unpkg.com/)
+#### via `<script>` or CDN ([UNPKG](https://unpkg.com/))
 
 The `forceAttract()` method is available in the global `d3` namespace.
 
